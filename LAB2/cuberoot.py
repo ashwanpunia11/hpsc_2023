@@ -1,5 +1,4 @@
-
-def Fun_cuberoot(x):
+def cuberoot(x):
 s=2;
 kmax=50;
 for k in range(kmax):
@@ -15,8 +14,8 @@ from numpy import cbrt
 xvalues=[-1.e6, -10 , -2, 0, 2, 10, 1.e6]
 for x in xvalues:
 print("Testing with x=%20.15e" %x)
-s=Fun_cuberoot(x)
+s=cuberoot(x)
 s_numpy=cbrt(x)
 print("cuberoot s = %20.15e, numpy s = %20.15e" %(s,s_numpy))
-assert abs(s-s_numpy) < 1.e-14, "Cuberoot does not agree with numpy cbrt"
+assert abs(s-s_numpy) < 1.e-14, "Your cuberoot does not agree with numpy cbrt"
 
